@@ -1,0 +1,252 @@
+/* GOOGLE FONT IMPORT */
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,700;0,900;1,500&display=swap');
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* VARIABLES */
+
+:root {
+
+    /* COLOR */ 
+    --BG-COLOR: hsl(225, 100%, 94%);
+    --SUMMARY-BG-COLOR: rgb(255, 255, 255);
+    --DESCRIPTION-COLOR: hsla(224, 23%, 55%, 0.801);
+
+    /* BUTTONS AND LINKS */
+    --TITLE-COLOR: hsl(223, 47%, 23%);
+    --HOVER-COLORS: rgb(118, 108, 241);
+    --ACTIVE-COLOR: rgb(108, 181, 241);
+
+    /* GENERAL */
+    --PADDING: 20px;
+}
+
+
+/* Order Summary PROJECT */
+
+body {
+    background-color: var(--BG-COLOR);
+    font-family: "Red Hat Display", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+article {
+    background-color: var(--SUMMARY-BG-COLOR);
+    width: 450px;
+    min-width: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+
+/* MAIN IMAGE */
+
+article figure {
+    width: 100%;
+}
+
+.hero-image {
+    border-radius: 20px 20px 0 0;
+}
+
+
+/* TITLE */
+
+.order-summary-container {
+    width: 360px;
+    text-align: center;
+}
+
+h1 {
+    padding: 40px 0 20px;
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: var(--TITLE-COLOR);
+}
+
+.summary-description {
+    padding: 0 var(--PADDING) var(--PADDING);
+    color: var(--DESCRIPTION-COLOR);
+    font-weight: 700;
+}
+
+
+/* ANNUAL PLAN */
+
+.annual-plan-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--PADDING);
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 10px;
+}
+
+.annual-plan {
+    display: flex;
+    gap: 15px;
+}
+
+.annual-plan-title {
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.price-per-year {
+    color: var(--DESCRIPTION-COLOR);
+}
+
+.annual-plan-container a {
+    font-weight: 900;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+.annual-plan-container a:hover, 
+.annual-plan-container a:focus {
+    color: var(--HOVER-COLORS);
+}
+
+
+/* PAYMENT BUTTONS */
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    padding: var(--PADDING) 0;
+    
+}
+
+.payment-button, .cancel-button {
+    padding: var(--PADDING);
+    margin: 5px 0;
+    border-radius: 10px;
+    border: none;
+    font-weight: 800;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.payment-button {
+    background-color:rgb(56, 41, 224);
+    color: var(--SUMMARY-BG-COLOR);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: background-color 0.5s, box-shadow 0.5s;
+}
+
+.payment-button:hover, .payment-button:focus {
+    background-color: var(--HOVER-COLORS);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+}
+
+.payment-button:active {
+    background-color: var(--ACTIVE-COLOR);
+}
+
+.annual-plan-container a:active,
+.cancel-button:active {
+    color: var(--ACTIVE-COLOR)
+}
+
+.cancel-button {
+    background-color: var(--SUMMARY-BG-COLOR);
+    color: var(--DESCRIPTION-COLOR);
+    transition: color 0.5s;
+}
+
+.cancel-button:hover, .cancel-button:focus {
+    color: black;
+}
+
+
+/* MEDIA QUERIES */
+
+/* || SMALL */
+
+@media (min-width: 0) and (max-width: 640px) {
+    
+    body {
+        background-color: var(--SUMMARY-BG-COLOR);
+    }
+    
+    article {
+        width: 100%;
+        max-height: 800px;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .hero-image, .order-summary-container {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        margin: 0 0 20px;
+    }
+    
+    .button-container, .annual-plan-container, .summary-description {
+        margin: 0 40px;
+        
+    }
+
+   
+}
+
+
+/* || BIG */
+
+@media (min-width: 641px) and (max-width: 1025px) {
+    body {
+        background-color: var(--SUMMARY-BG-COLOR);
+    }
+    
+    article {
+        width: 100%;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        border-radius: 0;
+        box-shadow: none
+    }
+
+    .hero-image, .order-summary-container {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+
+    .button-container, .annual-plan-container, .summary-description {
+        margin: 30px 100px;
+    }
+
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
