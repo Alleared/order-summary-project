@@ -34,6 +34,9 @@
 
 body {
     background-color: var(--BG-COLOR);
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
     font-family: "Red Hat Display", sans-serif;
     display: flex;
     flex-direction: column;
@@ -184,6 +187,9 @@ h1 {
     
     body {
         background-color: var(--SUMMARY-BG-COLOR);
+        background-image: url(../images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
     }
     
     article {
@@ -220,6 +226,9 @@ h1 {
 @media (min-width: 641px) and (max-width: 1025px) {
     body {
         background-color: var(--SUMMARY-BG-COLOR);
+        background-image: url(../images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
     }
     
     article {
